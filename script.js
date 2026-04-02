@@ -448,6 +448,3 @@ function updateRealTimeChart() {
     document.getElementById('liveCost').innerText =
         `Total Cost: $${totalUSD.toFixed(2)} / ₹${totalINR.toFixed(2)}`;
 }
-
-// You can expand this later for charts & calculator
-console.log("Cloud UI Loaded");
