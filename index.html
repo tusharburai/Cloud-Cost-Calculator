@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Cost Calculator Pro</title>
-  <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -72,89 +72,84 @@
             </div>
         </div>
 
-    <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<div class="container">
-
-    <!-- HEADER -->
-    <div class="header glass">
-        <h1>☁ Cloud Cost Calculator</h1>
-        <p>Cloud Infrastructure Architecture</p>
-    </div>
-
-    <!-- =========================
-         ARCHITECTURE SECTION
-    ========================== -->
-    <div class="page-wrapper">
-        <div class="diagram-card">
-
-            <h2 class="card-title">Cloud Infrastructure Architecture</h2>
-
-            <!-- NETWORK -->
-            <div class="arch-layer">
-                <h3 class="layer-title">🌐 Networking</h3>
-
-                <div class="layer-icons">
-                    <div class="icon-box">🌍<p>Internet</p></div>
-                    <div class="icon-box">📡<p>DNS</p></div>
-                    <div class="icon-box">⚖<p>Load Balancer</p></div>
-                </div>
-            </div>
-
-            <div class="flow">⬇ Data Flow ⬇</div>
-
-            <!-- COMPUTE -->
-            <div class="arch-layer">
-                <h3 class="layer-title">⚙ Compute (Auto Scaling)</h3>
-
-                <div class="vm-grid">
-                    <div class="vm-box">
-                        <span>🖥 VM 1</span>
-                        <span>vCPU · RAM</span>
-                        <span class="status"></span>
-                    </div>
-
-                    <div class="vm-box">
-                        <span>🖥 VM 2</span>
-                        <span>vCPU · RAM</span>
-                        <span class="status"></span>
-                    </div>
-
-                    <div class="vm-box">
-                        <span>🖥 VM 3</span>
-                        <span>vCPU · RAM</span>
-                        <span class="status"></span>
+        <!-- ☁️ Cloud Architecture Diagram - PROPERLY DESIGNED -->
+        <section class="diagram-section glass-effect">
+            <h2 class="section-title">☁️ Cloud Infrastructure Architecture</h2>
+            
+            <div class="architecture-flow">
+                <!-- Layer 1: Networking -->
+                <div class="arch-layer networking-layer">
+                    <div class="layer-badge">1️⃣ Networking</div>
+                    <div class="layer-icons">
+                        <div class="arch-icon">
+                            <span class="icon-emoji">🌐</span>
+                            <span>Public Internet</span>
+                        </div>
+                        <div class="arch-icon">
+                            <span class="icon-emoji">🔄</span>
+                            <span>Cloud DNS</span>
+                        </div>
+                        <div class="arch-icon">
+                            <span class="icon-emoji">⚖️</span>
+                            <span>Load Balancer</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="flow">⬇ Data Flow ⬇</div>
-
-            <!-- STORAGE -->
-            <div class="arch-layer">
-                <h3 class="layer-title">💾 Storage</h3>
-
-                <div class="storage-grid">
-                    <div class="storage-box">🗄 Active DB</div>
-                    <div class="storage-box">📦 Backup</div>
-                    <div class="storage-box">🧊 Archive</div>
+                
+                <div class="flow-arrow">⬇️ Data Flow ⬇️</div>
+                
+                <!-- Layer 2: Compute -->
+                <div class="arch-layer compute-layer">
+                    <div class="layer-badge">2️⃣ Compute</div>
+                    <div class="asg-box">
+                        <div class="asg-title">Auto Scaling Group</div>
+                        <div class="vm-grid">
+                            <div class="vm-box">
+                                <div class="vm-status"></div>
+                                <span>VM 1</span>
+                                <small>⚡vCPU 💾RAM</small>
+                            </div>
+                            <div class="vm-box">
+                                <div class="vm-status"></div>
+                                <span>VM 2</span>
+                                <small>⚡vCPU 💾RAM</small>
+                            </div>
+                            <div class="vm-box">
+                                <div class="vm-status"></div>
+                                <span>VM 3</span>
+                                <small>⚡vCPU 💾RAM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flow-arrow">⬇️ Data Flow ⬇️</div>
+                
+                <!-- Layer 3: Storage -->
+                <div class="arch-layer storage-layer">
+                    <div class="layer-badge">3️⃣ Storage</div>
+                    <div class="storage-grid">
+                        <div class="storage-box db">
+                            <span>🗄️</span>
+                            <span>Active DB</span>
+                        </div>
+                        <div class="storage-box backup">
+                            <span>📦</span>
+                            <span>Backup/Logs</span>
+                        </div>
+                        <div class="storage-box archive">
+                            <span>📁</span>
+                            <span>Archive</span>
+                        </div>
+                    </div>
+                    <div class="lifecycle-badge">🔄 Lifecycle Policy</div>
                 </div>
             </div>
-
-        </div>
-    </div>
-
-</div>
+        </section>
 
         <!-- 💾 Storage Cost Table + Graph -->
         <section class="table-section glass-effect">
-            <h2 class="section-title">💾 Storage Cost Comparision </h2>
+            <h2 class="section-title">💾 Storage Cost Comparison</h2>
             
             <table class="cost-table">
                 <thead>
