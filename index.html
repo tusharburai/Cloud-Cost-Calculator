@@ -72,109 +72,83 @@
             </div>
         </div>
 
-      <!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>☁ Cloud Infrastructure Architecture</h1>
-
-<!-- NETWORKING -->
-<div class="section networking">
-    <h2>🌐 Networking</h2>
-
-    <div class="grid-3">
-        <div class="card">
-            <i class="fa-solid fa-globe"></i>
-            <p>Public Internet</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-signal"></i>
-            <p>Cloud DNS</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-scale-balanced"></i>
-            <p>Load Balancer</p>
-        </div>
-    </div>
-</div>
-
-<p class="flow">⬇ Data Flow ⬇</p>
-
-<!-- COMPUTE -->
-<div class="section compute">
-    <h2>⚙ Compute (Auto Scaling)</h2>
-
-    <div class="auto-scale">
-
-        <div class="vm-box">
-            <div class="vm-info">
-                <strong>VM 1</strong>
-                <span><i class="fa-solid fa-bolt"></i> vCPU</span>
-                <span><i class="fa-solid fa-memory"></i> RAM</span>
-            </div>
-            <div class="status-dot"></div>
-        </div>
-
-        <div class="vm-box">
-            <div class="vm-info">
-                <strong>VM 2</strong>
-                <span><i class="fa-solid fa-bolt"></i> vCPU</span>
-                <span><i class="fa-solid fa-memory"></i> RAM</span>
-            </div>
-            <div class="status-dot"></div>
-        </div>
-
-        <div class="vm-box">
-            <div class="vm-info">
-                <strong>VM 3</strong>
-                <span><i class="fa-solid fa-bolt"></i> vCPU</span>
-                <span><i class="fa-solid fa-memory"></i> RAM</span>
-            </div>
-            <div class="status-dot"></div>
-        </div>
-
-    </div>
-</div>
-
-<p class="flow">⬇ Data Flow ⬇</p>
-
-<!-- STORAGE -->
-<div class="section storage">
-    <h2>💾 Storage</h2>
-
-    <div class="storage-boxes">
-
-        <div class="storage-card active">
-            <i class="fa-solid fa-database"></i>
-            <p>Active DB</p>
-        </div>
-
-        <div class="storage-card backup">
-            <i class="fa-solid fa-box"></i>
-            <p>Backup / Logs</p>
-        </div>
-
-        <div class="storage-card archive">
-            <i class="fa-solid fa-archive"></i>
-            <p>Archive</p>
-        </div>
-
+    <!-- HEADER -->
+    <div class="header glass">
+        <h1>☁ Cloud Cost Calculator</h1>
+        <p>Cloud Infrastructure Architecture</p>
     </div>
 
-    <div class="lifecycle">♻ Lifecycle Policy Active</div>
+    <!-- =========================
+         ARCHITECTURE SECTION
+    ========================== -->
+    <div class="page-wrapper">
+        <div class="diagram-card">
 
-</div>
+            <h2 class="card-title">Cloud Infrastructure Architecture</h2>
+
+            <!-- NETWORK -->
+            <div class="arch-layer">
+                <h3 class="layer-title">🌐 Networking</h3>
+
+                <div class="layer-icons">
+                    <div class="icon-box">🌍<p>Internet</p></div>
+                    <div class="icon-box">📡<p>DNS</p></div>
+                    <div class="icon-box">⚖<p>Load Balancer</p></div>
+                </div>
+            </div>
+
+            <div class="flow">⬇ Data Flow ⬇</div>
+
+            <!-- COMPUTE -->
+            <div class="arch-layer">
+                <h3 class="layer-title">⚙ Compute (Auto Scaling)</h3>
+
+                <div class="vm-grid">
+                    <div class="vm-box">
+                        <span>🖥 VM 1</span>
+                        <span>vCPU · RAM</span>
+                        <span class="status"></span>
+                    </div>
+
+                    <div class="vm-box">
+                        <span>🖥 VM 2</span>
+                        <span>vCPU · RAM</span>
+                        <span class="status"></span>
+                    </div>
+
+                    <div class="vm-box">
+                        <span>🖥 VM 3</span>
+                        <span>vCPU · RAM</span>
+                        <span class="status"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow">⬇ Data Flow ⬇</div>
+
+            <!-- STORAGE -->
+            <div class="arch-layer">
+                <h3 class="layer-title">💾 Storage</h3>
+
+                <div class="storage-grid">
+                    <div class="storage-box">🗄 Active DB</div>
+                    <div class="storage-box">📦 Backup</div>
+                    <div class="storage-box">🧊 Archive</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </div>
 
